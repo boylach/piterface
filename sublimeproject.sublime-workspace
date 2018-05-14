@@ -1,0 +1,273 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "Package Control: ",
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 444.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/mac/Google Drive/G_fun/scanner/code/piterface"
+	],
+	"file_history":
+	[
+		"/C/Users/mac/Google Drive/G_jobs/citrus/repo1/tests_CppSPI/spidev_fdx.c",
+		"/C/Users/mac/Google Drive/G_jobs/citrus/repo1/tests_CppSPI/spidev_test.c",
+		"/C/Users/mac/Google Drive/G_uni work/thesis/matlabWork/attempt1/sample code/source.txt",
+		"/C/Users/mac/Google Drive/G_jobs/citrus/3 March/code C SPI communication/16marchspitests/hello-world-spi.c",
+		"/C/Users/mac/Google Drive/G_fun/DRC/log",
+		"/C/Users/mac/Google Drive/G_fun/DRC/New Text Document.txt",
+		"/C/Users/mac/Google Drive/G_jobs/citrus/log/3 March.txt",
+		"/C/Users/mac/Google Drive/G_development/opencv331/opencv/build/include/opencv2/opencv.hpp",
+		"/C/Users/mac/Google Drive/G_development/opencv331/opencv/build/include/opencv2/world.hpp",
+		"/C/Users/mac/Google Drive/G_development/opencv331/opencv/sources/include/opencv2/opencv.hpp",
+		"/C/Users/mac/Google Drive/G_development/opencv331/opencvtest/ideas2.txt",
+		"/C/Users/mac/Google Drive/G_development/opencv331/opencvtest/ideas.txt",
+		"/C/Users/mac/Google Drive/G_jobs/citrus/log/2feb 22.txt",
+		"/C/Users/mac/Google Drive/G_jobs/citrus/log/2feb 21.txt",
+		"/C/Users/mac/Google Drive/G_development/curses/PDcurses/PDCursesTestProject2/PDCursesTestProject2/include/panel.h",
+		"/C/Users/mac/Google Drive/G_fun/scanner/log.txt",
+		"/C/Users/mac/Google Drive/G_admin/accomodation/rental prep/draft for wordy.txt",
+		"/C/Users/mac/Google Drive/G_development/curses/PDcurses/pdc34dllw/curses.h",
+		"/C/Users/mac/Google Drive/G_development/curses/PDcurses/pdc34dllw/panel.h",
+		"/C/Users/mac/Google Drive/G_development/curses/PDcurses/PDCursesTestProject2/PDCursesTestProject2/tutorial8.cpp",
+		"/C/Users/mac/Downloads/jlklkj.odt",
+		"/C/Users/mac/Google Drive/G_development/glut-3.7.6-bin/glut-3.7.6-bin/README-win32.txt",
+		"/C/Users/mac/AppData/Local/Temp/Temp1_simpleGlut.zip/simpleGlut/main.cpp",
+		"/C/Users/mac/Downloads/facebook-lachlanboyle9/messages/378.html",
+		"/C/Users/mac/Google Drive/G_fun/scanner/temporary 14 april/filmscanner/software/See3CAM_12CUNIR/See3CAM_12CUNIR_MH/Windows_Sample_Application/e-CAMView_1.0.45.198_Windows_20141015/SampleConsoleApplication_VS2012/SampleConsoleApplication_VS2012/targetver.h",
+		"/C/Users/mac/Google Drive/G_fun/scanner/temporary 14 april/filmscanner/software/See3CAM_12CUNIR/See3CAM_12CUNIR_MH/Windows_Sample_Application/e-CAMView_1.0.45.198_Windows_20141015/SampleConsoleApplication_VS2012/SampleConsoleApplication_VS2012/stdafx.cpp",
+		"/C/Users/mac/Google Drive/G_fun/scanner/temporary 14 april/filmscanner/software/See3CAM_12CUNIR/See3CAM_12CUNIR_MH/Windows_Sample_Application/e-CAMView_1.0.45.198_Windows_20141015/Release Notes.txt",
+		"/C/Users/mac/Google Drive/G_fun/scanner/temporary 14 april/filmscanner/software/See3CAM_12CUNIR/See3CAM_12CUNIR_MH/Windows_Sample_Application/e-CAMView_1.0.45.198_Windows_20141015/SampleConsoleApplication_VS2012/SampleConsoleApplication_VS2012/SampleConsoleApplication_VS2012.cpp",
+		"/C/Users/mac/Google Drive/G_development/opencv331/log.txt",
+		"/C/Users/mac/AppData/Local/Temp/Temp2_e-con_Modified_OpenCV.zip/e-con_Modified_OpenCV/eCon_CustomFormat_SampleApp.cpp",
+		"/C/Users/mac/Dropbox/TD-C1 scanner design Team Folder/software/tests and practice/serialIdeas",
+		"/C/Users/mac/Dropbox/TD-C1 scanner design Team Folder/software/UGVProject20d17/common/serial3.cpp",
+		"/C/Users/mac/Dropbox/TD-C1 scanner design Team Folder/software/UGVProject20d17/include/serial3.h",
+		"/C/Users/mac/Google Drive/G_fun/scanner/temporary 14 april/filmscanner/software/See3CAM_12CUNIR/See3CAM_12CUNIR_MH/Windows_Sample_Application/e-CAMView_1.0.45.198_Windows_20141015/SampleConsoleApplication_VS2012/SampleConsoleApplication_VS2012/stdafx.h",
+		"/C/Users/mac/Google Drive/G_fun/scanner/temporary 14 april/filmscanner/software/See3CAM_12CUNIR/See3CAM_12CUNIR_MH/Windows_Sample_Application/e-CAMView_1.0.45.198_Windows_20141015/SampleConsoleApplication_VS2012/SampleConsoleApplication_VS2012/eCAMFwSw.h",
+		"/C/Users/mac/Google Drive/G_fun/New Text Document.txt",
+		"/C/Users/mac/Google Drive/G_fun/scanner/temporary 14 april/filmscanner/software/See3CAM_12CUNIR/See3CAM_12CUNIR_MH/Windows_Sample_Application/e-CAMView_1.0.45.198_Windows_20141015/SDK_Ver-1.0.43.196/eCAMFwSw.h",
+		"/C/Users/mac/Desktop/DRC 2017 REPORT.txt",
+		"/C/Users/mac/Desktop/DRC 2017 REPORT",
+		"/C/Users/mac/Google Drive/G_development/opencv2412/opencv-2.4.12/downloadedBinariesInstead/opencv/build/include/opencv2/opencv.hpp",
+		"/C/Users/mac/Google Drive/G_development/opencv2412/opencv-2.4.12/downloadedBinariesInstead/opencv/build/include/opencv2/opencv_modules.hpp",
+		"/C/Users/mac/Google Drive/G_development/opencv2412/opencv-2.4.12/e-con_Modified_OpenCV/e-con_Modified_OpenCV/eCon_CustomFormat_SampleApp.cpp",
+		"/C/Users/mac/Google Drive/G_development/opencv2412/opencv-2.4.12/e-con_Modified_OpenCV/e-con_Modified_OpenCV/Windows/src/OpenCV 2.4.x/cap_dshow.cpp",
+		"/C/Users/mac/Google Drive/G_development/opencv2412/opencv-2.4.12/opencv-2.4.12-with-see3cam/modules/highgui/include/opencv2/highgui/highgui.hpp",
+		"/C/Users/mac/Google Drive/G_development/opencv2412/opencv-2.4.12/opencv-2.4.12-with-see3cam/modules/highgui/include/opencv2/highgui.hpp",
+		"/C/Users/mac/Google Drive/G_development/opencv331/win_extracted/opencv/sources/samples/cpp/tutorial_code/videoio/video-input-psnr-ssim/video-input-psnr-ssim.cpp",
+		"/C/Users/mac/Google Drive/G_development/opencv331/win_extracted/opencv/sources/modules/stitching/include/opencv2/stitching/detail/matchers.hpp",
+		"/C/Users/mac/Google Drive/G_development/opencv331/win_extracted/opencv/sources/modules/stitching/include/opencv2/stitching.hpp",
+		"/C/Users/mac/Google Drive/G_development/opencv331/win_extracted/opencv/sources/samples/cpp/filestorage_base64.cpp",
+		"/C/Users/mac/Downloads/4456.1-2003(+A1).pdf",
+		"/C/Users/mac/Google Drive/G_development/opencv331/win_extracted/opencv/sources/modules/stitching/src/stitcher.cpp",
+		"/C/Users/mac/Google Drive/G_development/opencv331/win_extracted/opencv/sources/modules/stitching/include/opencv2/stitching/detail/camera.hpp",
+		"/C/Users/mac/Google Drive/G_development/opencv331/win_extracted/opencv/sources/modules/stitching/include/opencv2/stitching/warpers.hpp",
+		"/C/Users/mac/Google Drive/G_development/opencv331/win_extracted/opencv/sources/modules/stitching/include/opencv2/stitching/detail/blenders.hpp",
+		"/C/Users/mac/Google Drive/G_development/opencv331/win_extracted/opencv/sources/modules/stitching/src/opencl/multibandblend.cl",
+		"/C/Users/mac/Google Drive/G_development/opencv331/win_extracted/opencv/sources/samples/cpp/facial_features.cpp",
+		"/C/Users/mac/Google Drive/G_development/curses/PDcurses/PDCurses-master/PDCurses-master/curses.h",
+		"/C/Users/mac/Google Drive/G_development/curses/PDcurses/PDCurses-master/PDCurses-master/win32/README.md",
+		"/C/Users/mac/Google Drive/G_development/curses/PDcurses/PDCurses-master/PDCurses-master/doc/intro.md",
+		"/C/Users/mac/Google Drive/G_development/curses/PDcurses/PDCurses-master/PDCurses-master/win32a/README.md",
+		"/C/Users/mac/Google Drive/G_development/opencv331/win_extracted/opencv/README.md.txt",
+		"/C/Users/mac/Google Drive/G_fun/scanner/temporary 14 april/filmscanner/admin/accounts/warezbb.txt",
+		"/C/Users/mac/Dropbox/TD-C1 scanner design Team Folder/software/UGVProject20d17/include/SerialComms_2.h",
+		"/C/Users/mac/Dropbox/TD-C1 scanner design Team Folder/software/UGVProject20d17/common/SerialComms_2.cpp",
+		"/C/Users/mac/Dropbox/TD-C1 scanner design Team Folder/software/tests and practice/mojoTutorials/provided modules/sample_mojo_UCF.ucf",
+		"/C/Users/mac/Dropbox/TD-C1 scanner design Team Folder/software/tests and practice/mojoTutorials/provided modules/base_module.v",
+		"/C/Users/mac/Dropbox/TD-C1 scanner design Team Folder/software/tests and practice/mojoTutorials/provided modules/module button_conditioner.v",
+		"/C/Users/mac/Dropbox/TD-C1 scanner design Team Folder/software/tests and practice/mojoTutorials/provided modules/module mojo_top.v",
+		"/C/Users/mac/Downloads/MTRN4230_Asst_4_Group_F/MTRN4230_Asst_4_Group_F/MTRN4230_GroupF_Ass4-master/GUI/image_processing/overlayBlocks.m",
+		"/C/Users/mac/Google Drive/G_uni work/MTRN3500 - c++/project 2/SystemIntegrationVis-Base-2015/serialcomms.h",
+		"/C/Users/mac/Google Drive/G_uni work/MTRN3500 - c++/project 2/SystemIntegrationVis-Base-2015/SerialComms.cpp",
+		"/C/Users/mac/Dropbox/TD-C1 scanner design Team Folder/software/UGVProject20d17/!plans/hierachy.txt",
+		"/C/Users/mac/Google Drive/G_uni work/thesis/week 12 work/reference",
+		"/C/Users/mac/Google Drive/G_uni work/thesis/week 12 work/outline1",
+		"/C/Users/mac/Dropbox/TD-C1 scanner design Team Folder/software/tests and practice/mojo-arduino-master/mojo-arduino-master/README.md",
+		"/C/Users/mac/Dropbox/TD-C1 scanner design Team Folder/software/UGVProject20d17/include/SMStructs.h",
+		"/C/Users/mac/Google Drive/G_uni work/MTRN3500 - c++/project 2/SystemIntegrationVis-Base-2015/ProcessManagementFragments.cpp",
+		"/C/Users/mac/Google Drive/G_uni work/thesis/literature review/A1 - HP journal on scanner design.txt",
+		"/C/Users/mac/Google Drive/G_uni work/thesis/week 12 work/research notes",
+		"/C/Users/mac/Google Drive/G_uni work/thesis/week 12 work/litreview.txt",
+		"/C/Users/mac/Google Drive/G_uni work/thesis/week8 work/research notes",
+		"/C/Users/mac/Google Drive/G_uni work/MTRN4230 - robotics/project 3/ideas.txt",
+		"/C/Users/mac/Google Drive/G_uni work/MTRN4230 - robotics/project 3/ass3-1a",
+		"/C/Users/mac/Google Drive/G_uni work/thesis/help/unswthesis-2.0/unswthesis-2.0/evaluation.tex",
+		"/C/Development/openGlTutorial/build/playground.dir/SimpleFragmentShader.cpp",
+		"/C/Development/openGlTutorial/ogl-master/ogl-master/common/shader.cpp",
+		"/C/Users/mac/Documents/GitHub/MTRN4230_GroupF_Ass2/README.md",
+		"/C/Users/mac/Google Drive/G_uni work/MTRN4230 - robotics/project 2/lastlabIdes",
+		"/C/Users/mac/Google Drive/G_uni work/MTRN4230 - robotics/project 2/MTRN4230_GroupF_Ass2-master (1)/MTRN4230_GroupF_Ass2-master/README.md",
+		"/C/Users/mac/Google Drive/G_fun/scanner/temporary 14 april/filmscanner/software/See3CAM_12CUNIR/qtcam-master/src/main.cpp",
+		"/C/Development/opencv-3.3.0/README.md",
+		"/C/Users/mac/Google Drive/G_uni work/thesis/week5 work/downsamplingIdea.cpp.txt",
+		"/C/Users/mac/AppData/Roaming/MathWorks/MATLAB/R2017a/matlab.prf",
+		"/C/Users/mac/Google Drive/G_fun/scanner/temporary 14 april/filmscanner/software/See3CAM_12CUNIR/qtcam-master/src/cameraproperty.cpp",
+		"/C/Users/mac/Google Drive/G_fun/scanner/temporary 14 april/filmscanner/software/See3CAM_12CUNIR/qtcam-master/src/see3cam_cu130.cpp",
+		"/C/Users/mac/Google Drive/G_fun/scanner/temporary 14 april/filmscanner/software/See3CAM_12CUNIR/qtcam-master/src/v4l2-api.cpp",
+		"/C/Users/mac/Google Drive/G_fun/scanner/temporary 14 april/filmscanner/software/See3CAM_12CUNIR/qtcam-master/src/videostreaming.cpp",
+		"/C/Users/mac/Google Drive/G_fun/scanner/temporary 14 april/filmscanner/software/See3CAM_12CUNIR/qtcam-master/src/qtquick2applicationviewer/qtquick2applicationviewer.h",
+		"/C/Users/mac/Google Drive/G_fun/scanner/temporary 14 april/filmscanner/software/See3CAM_12CUNIR/qtcam-master/src/qtquick2applicationviewer/qtquick2applicationviewer.cpp",
+		"/C/Program Files/USBPcap/testrea",
+		"/C/Program Files/USBPcap/ewew"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "sublimeproject.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 279.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
