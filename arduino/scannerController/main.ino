@@ -125,12 +125,13 @@ void loop() {
 jog(int delms, int iter, int pin1, int pin2){
 // delms is not too accurate re. clock limits, pinwrite overhead, etc
 	for (int i=0; i < iter; i++) {
-	digitalWrite(pin1, HIGH);
-	digitalWrite(pin1, HIGH);
-	delayMicroseconds(delms);
-	digitalWrite(pin2, LOW);
-	digitalWrite(pin2, LOW);
-	delayMicroseconds(delms);
-
+		digitalWrite(pin1, HIGH);
+		digitalWrite(pin1, HIGH);
+		delayMicroseconds(delms);
+		digitalWrite(pin2, LOW);
+		digitalWrite(pin2, LOW);
+		delayMicroseconds(delms);
+	}
 	return 1;
 }
+
