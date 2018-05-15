@@ -22,7 +22,7 @@ $(function(){
                 data.status = 0;
                 break;
             case 12:    // carriage +
-                data.action = "focus C";f
+                data.action = "focus C";
                 data.status = 1;
                 break;
             case 6:     // carriage -
