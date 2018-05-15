@@ -1,6 +1,4 @@
-// arduino main
-
-// led blink example
+// arduino led blink example
 // verified with: arduino --verify --board arduino:avr:uno --port /dev/ttyACM0 arduinomain.ino
 
 void setup() {
