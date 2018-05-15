@@ -31,13 +31,7 @@ $(function(){
                 data.status = 0;
                 break;                
         }
-
-
-
-        data.action = (data.gpio == 19)|(data.gpio == 16) ? "focusA" : "write";                 // check if focus A motors
-        data.action = (data.gpio == 26)|(data.gpio == 20) ? "focusB" : "write";     // check if focus B motors
-        data.action = (data.gpio == 12)|(data.gpio == 6) ? "motionC" : "write";      // check if motion C motor
-
+        
         console.log(data);
         $.ajax({
             type: 'POST',
