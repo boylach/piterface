@@ -122,7 +122,7 @@ void loop() {
     }
 }
 
-jog(int delms, int iter, int pin1, int pin2){
+int jog(int delms, int iter, int pin1, int pin2){
 // delms is not too accurate re. clock limits, pinwrite overhead, etc
 	for (int i=0; i < iter; i++) {
 		digitalWrite(pin1, HIGH);
