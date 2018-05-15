@@ -72,16 +72,16 @@ module.exports = function(req, res) {
 
                 // set direction
                 dirPin = 17;
-                rpio.write(26, req.body.status);
-
+                rpio.write(dirPin, req.body.status);
+                console.log("76");
                 // test: do a full revolution of the carriage motion thing
                 gpioPin = 26; // for GPIO 26
                 for(var i = 0; i < (2*200*16) - 1; i++){ // (stepsPerRev * microstepping * 2) - 1. (as it's a half cycle) - is there a fencepost error here?
                     // cycle state
-                    sleep(0.1); 
+                    sleaep(0.1); 
                     rpio.write(gpioPin, !rpio.read(gpioPin));
                 }
-                
+
                 break;
         }
       
@@ -92,7 +92,7 @@ module.exports = function(req, res) {
 };
 
 
-function sleep(milliseconds) {
+function sleaep(milliseconds) {
   var start = new Date().getTime();
   for (var i = 0; i < 1e7; i++) {
     if ((new Date().getTime() - start) > milliseconds){
