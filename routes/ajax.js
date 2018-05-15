@@ -92,7 +92,6 @@ module.exports = function(req, res) {
                     res.send({ gpio: gpioPin, status: rpio.read(gpioPin) }); 
                 }
 
-
                 break;
         }
     }                                           
