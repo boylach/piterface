@@ -4,7 +4,6 @@ $(function(){
         data.gpio = $(this).data("gpio");
         data.status = this.checked;
         // data.action = "write";   // original
-        //data.action = (data.gpio < 20) ? "write" : "stepperFocusLoop";
         switch(data.gpio) {
             case 19:    // focus A +
                 data.action = "focus A";
@@ -29,9 +28,11 @@ $(function(){
             case 6:     // carriage -
                 data.action = "focus C";
                 data.status = 0;
-                break;                
+                break;
+            default:
+                data.action = "write";       
         }
-        
+
         console.log(data);
         $.ajax({
             type: 'POST',
