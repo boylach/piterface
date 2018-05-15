@@ -21,12 +21,12 @@ $(function(){
                 data.action = "focus B";
                 data.status = 0;
                 break;
-            case 12:    // carriage +
-                data.action = "focus C";
+            case 6:    // carriage +
+                data.action = "carriage C";
                 data.status = 1;
                 break;
-            case 6:     // carriage -
-                data.action = "focus C";
+            case 12:     // carriage -
+                data.action = "carriage C";
                 data.status = 0;
                 break;
             default:

@@ -24,7 +24,7 @@ module.exports = function(req, res) {
                 res.send({ gpio: req.body.gpio, status: req.body.status });
                 break;
 
-            case 'focus A':
+            case 'focus A': 
                 rpio.init({mapping: 'gpio'});
                 rpio.open(req.body.gpio, rpio.OUTPUT, + req.body.status);
                 rpio.write(req.body.gpio, + req.body.status);
@@ -60,7 +60,7 @@ module.exports = function(req, res) {
                 //}
                 break;
 
-            case 'focus C':
+            case 'carriage C':
                 rpio.init({mapping: 'gpio'});
                 rpio.open(req.body.gpio, rpio.OUTPUT, + req.body.status);
                 rpio.write(req.body.gpio, + req.body.status);
@@ -69,13 +69,19 @@ module.exports = function(req, res) {
 
                 console.log("focus C");
                 console.log((req.body.status) ? "forward" : "back");
-                // test: do a full revolution of the carriage motion thing
-                //for(var i = 0; i < 200*16 - 1; i++){ // stepsPerRev * microstepping
-                    // cycle state
-                //    slee
 
-                //    sleep()
-                //}
+                // set direction
+                dirPin = 17;
+                rpio.write(26, req.body.status);
+
+                // test: do a full revolution of the carriage motion thing
+                gpioPin = 26; // for GPIO 26
+                for(var i = 0; i < (2*200*16) - 1; i++){ // (stepsPerRev * microstepping * 2) - 1. (as it's a half cycle) - is there a fencepost error here?
+                    // cycle state
+                    sleep(0.1); 
+                    rpio.write(gpioPin, !rpio.read(gpioPin));
+                }
+                
                 break;
         }
       
@@ -84,3 +90,13 @@ module.exports = function(req, res) {
     // res.send({ some: req.body.action });     
 
 };
+
+
+function sleep(milliseconds) {
+  var start = new Date().getTime();
+  for (var i = 0; i < 1e7; i++) {
+    if ((new Date().getTime() - start) > milliseconds){
+      break;
+    }
+  }
+}
