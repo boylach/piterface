@@ -7,6 +7,115 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 449,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 402,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "views/error.jade",
+			"settings":
+			{
+				"buffer_size": 84,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "views/index.jade",
+			"settings":
+			{
+				"buffer_size": 9423,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "views/layout.jade",
+			"settings":
+			{
+				"buffer_size": 585,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app.js",
+			"settings":
+			{
+				"buffer_size": 1520,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "var rpio = require('rpio');\n\n\n\n/* GET ajax response. */\nmodule.exports = function(req, res) {\n    \n    if (req.body.hasOwnProperty('action')) {\n        rpio.init({mapping: 'gpio'});\n        switch( req.body.action) {\n            case 'write': \n                /*gpio.setup(req.body.gpio, gpio.DIR_OUT, function() {\n                    gpio.write(req.body.gpio, req.body.status, function(err) {\n                        \n                        res.contentType('json');\n                        res.send({ gpio: req.body.gpio, status: req.body.status, error: err });\n                        if (err) throw err;\n                        console.log('Written to pin');\n                    });\n                });*/\n                rpio.init({mapping: 'gpio'});\n                rpio.open(req.body.gpio, rpio.OUTPUT, + req.body.status);\n                rpio.write(req.body.gpio, + req.body.status);\n                res.contentType('json');\n                res.send({ gpio: req.body.gpio, status: req.body.status });\n                break;\n\n            case 'focus A': \n                rpio.init({mapping: 'gpio'});\n                rpio.open(req.body.gpio, rpio.OUTPUT, + req.body.status);\n                rpio.write(req.body.gpio, + req.body.status);\n                res.contentType('json');\n                res.send({ gpio: req.body.gpio, status: req.body.status });\n\n                console.log(\"focus A\");\n                console.log((req.body.status) ? \"forward\" : \"back\");\n                // test: do a full revolution of the carriage motion thing\n                //for(var i = 0; i < 200*16 - 1; i++){ // stepsPerRev * microstepping\n                    // cycle state\n                //    slee\n\n                //    sleep()\n                //}\n                break;\n\n            case 'focus B':\n                rpio.init({mapping: 'gpio'});\n                rpio.open(req.body.gpio, rpio.OUTPUT, + req.body.status);\n                rpio.write(req.body.gpio, + req.body.status);\n                res.contentType('json');\n                res.send({ gpio: req.body.gpio, status: req.body.status });\n\n                console.log(\"focus B\");\n                console.log((req.body.status) ? \"forward\" : \"back\");\n                // test: do a full revolution of the carriage motion thing\n                //for(var i = 0; i < 200*16 - 1; i++){ // stepsPerRev * microstepping\n                    // cycle state\n                //    slee\n\n                //    sleep()\n                //}\n                break;\n\n            case 'carriage C':\n            //    rpio.init({mapping: 'gpio'});\n            //    rpio.open(req.body.gpio, rpio.OUTPUT, + req.body.status);\n            //    rpio.write(req.body.gpio, + req.body.status);\n            //    res.contentType('json');\n            //    res.send({ gpio: req.body.gpio, status: req.body.status });\n\n                console.log(\"focus C\");\n                console.log((req.body.status) ? \"forward\" : \"back\");\n\n                // set direction\n                dirPin = 17;\n                \n                rpio.open(req.body.gpio, rpio.OUTPUT, + req.body.status);\n                rpio.write(dirPin, req.body.status);\n            //    res.contentType('json');\n\n                console.log(\"76\");\n                console.log(req.body.gpio);\n            //    res.send({ gpio: req.body.gpio, status: req.body.status });\n\n                // test: do a full revolution of the carriage motion thing\n                gpioPin = 26; // for GPIO 26\n                for(var i = 0; i < /*(2*200*16) - 1*/ 100; i++){ // (stepsPerRev * microstepping * 2) - 1. (as it's a half cycle) - is there a fencepost error here?\n                    // cycle state\n                    sleaep(10); \n                    rpio.write(gpioPin, !rpio.read(gpioPin));\n                    res.contentType('json');\n                    res.send({ gpio: gpioPin, status: rpio.read(gpioPin) }); \n                }\n\n                break;\n        }\n    }                                           \n    // res.contentType('json');                 \n    // res.send({ some: req.body.action });     \n                                                \n};\n\n\nfunction sleaep(milliseconds) {\n  var start = new Date().getTime();\n  for (var i = 0; i < 1e7; i++) {\n    if ((new Date().getTime() - start) > milliseconds){\n      break;\n    }\n  }\n}\n",
+			"file": "routes/ajax.js",
+			"file_size": 4399,
+			"file_write_time": 131708349576835762,
+			"settings":
+			{
+				"buffer_size": 4336,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "arduino/arduinomain.ino",
+			"settings":
+			{
+				"buffer_size": 592,
+				"encoding": "UTF-8",
+				"line_ending": "Windows",
+				"name": "// arduino main"
+			}
+		},
+		{
+			"file": "bin/www",
+			"settings":
+			{
+				"buffer_size": 1618,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/stylesheets/bootstrap-toggle.min.css",
+			"settings":
+			{
+				"buffer_size": 1590,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "routes/index.js",
+			"settings":
+			{
+				"buffer_size": 226,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "public/javascripts/client.js",
+			"settings":
+			{
+				"buffer_size": 1473,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -44,7 +153,8 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/mac/Google Drive/G_fun/scanner/code/piterface"
+		"/C/Users/mac/Google Drive/G_fun/scanner/code/piterface",
+		"/C/Users/mac/Google Drive/G_fun/scanner/code/piterface/arduino"
 	],
 	"file_history":
 	[
@@ -152,13 +262,14 @@
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 63.0
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 173.0,
 		"where_history":
 		[
+			""
 		]
 	},
 	"find_state":
@@ -166,6 +277,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"$.ajax({",
+			"POST",
+			"/ajax",
+			"checkbox"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -183,18 +298,376 @@
 	"groups":
 	[
 		{
+			"selected": 7,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 449,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								449,
+								449
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 402,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								402,
+								402
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "views/error.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 84,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								84,
+								84
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "views/index.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9423,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								148,
+								150
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2650.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "views/layout.jade",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 585,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1520,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								359,
+								359
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 57.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "routes/ajax.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4336,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4147,
+								4147
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1248.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "arduino/arduinomain.ino",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 592,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								592,
+								592
+							]
+						],
+						"settings":
+						{
+							"auto_name": "// arduino main",
+							"syntax": "Packages/C++/C.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "bin/www",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1618,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								474,
+								474
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 323.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "public/stylesheets/bootstrap-toggle.min.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1590,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								527,
+								532
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 10,
+					"file": "routes/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 226,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								226,
+								226
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "public/javascripts/client.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1473,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								380,
+								384
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 228.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 27.0
+		"height": 51.0
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 39.0
 	},
 	"layout":
 	{
@@ -205,11 +678,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.687325905292,
 			1.0
 		],
 		"rows":
@@ -227,7 +707,7 @@
 	"project": "sublimeproject.sublime-project",
 	"replace":
 	{
-		"height": 50.0
+		"height": 98.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -265,7 +745,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 279.0,
+	"side_bar_width": 268.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

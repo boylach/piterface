@@ -1,6 +1,7 @@
 // arduino main
 
 // led blink example
+// verified with: arduino --verify --board arduino:avr:uno --port /dev/ttyACM0 arduinomain.ino
 
 void setup() {
   // initialize digital pin LED_BUILTIN as an output.
@@ -14,3 +15,4 @@ void loop() {
   digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
   delay(1000);                       // wait for a second
 }
+
