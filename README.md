@@ -8,5 +8,4 @@ https://tutorials-raspberrypi.com/setup-raspberry-pi-node-js-webserver-control-g
 
 Present motivation is to make a computer control interface for the scanner for now.
 testing starting code works... 
-	missing some js dependency; so doing apt-get update/upgrade... no effect
-	doing npm install for express, serve-favicon, morgan, cookie-parser, body-parser, 
+	following the setup procedure in tutorial... 

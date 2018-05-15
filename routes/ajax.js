@@ -7,8 +7,7 @@ module.exports = function(req, res) {
     
     if (req.body.hasOwnProperty('action')) {
         switch( req.body.action) {
-            case 'write':
-            
+            case 'write': 
                 /*gpio.setup(req.body.gpio, gpio.DIR_OUT, function() {
                     gpio.write(req.body.gpio, req.body.status, function(err) {
                         
@@ -23,27 +22,60 @@ module.exports = function(req, res) {
                 rpio.write(req.body.gpio, + req.body.status);
                 res.contentType('json');
                 res.send({ gpio: req.body.gpio, status: req.body.status });
-            
                 break;
 
-            case 'stepperFocusLoop':
-
+            case 'focus A':
                 rpio.init({mapping: 'gpio'});
                 rpio.open(req.body.gpio, rpio.OUTPUT, + req.body.status);
                 rpio.write(req.body.gpio, + req.body.status);
                 res.contentType('json');
                 res.send({ gpio: req.body.gpio, status: req.body.status });
 
-                console.log('stepperFocusLoop');
-            
+                console.log("focus A");
+                console.log((req.body.status) ? "forward" : "back");
                 // test: do a full revolution of the carriage motion thing
-        //        for(var i = 0; i < 200*16 - 1; i++){ // stepsPerRev * microstepping
+                //for(var i = 0; i < 200*16 - 1; i++){ // stepsPerRev * microstepping
                     // cycle state
-        //            slee
+                //    slee
 
-         //           sleep()
-         //       }
+                //    sleep()
+                //}
+                break;
 
+            case 'focus B':
+                rpio.init({mapping: 'gpio'});
+                rpio.open(req.body.gpio, rpio.OUTPUT, + req.body.status);
+                rpio.write(req.body.gpio, + req.body.status);
+                res.contentType('json');
+                res.send({ gpio: req.body.gpio, status: req.body.status });
+
+                console.log("focus B");
+                console.log((req.body.status) ? "forward" : "back");
+                // test: do a full revolution of the carriage motion thing
+                //for(var i = 0; i < 200*16 - 1; i++){ // stepsPerRev * microstepping
+                    // cycle state
+                //    slee
+
+                //    sleep()
+                //}
+                break;
+
+            case 'focus C':
+                rpio.init({mapping: 'gpio'});
+                rpio.open(req.body.gpio, rpio.OUTPUT, + req.body.status);
+                rpio.write(req.body.gpio, + req.body.status);
+                res.contentType('json');
+                res.send({ gpio: req.body.gpio, status: req.body.status });
+
+                console.log("focus C");
+                console.log((req.body.status) ? "forward" : "back");
+                // test: do a full revolution of the carriage motion thing
+                //for(var i = 0; i < 200*16 - 1; i++){ // stepsPerRev * microstepping
+                    // cycle state
+                //    slee
+
+                //    sleep()
+                //}
                 break;
         }
       
