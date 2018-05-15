@@ -84,13 +84,14 @@ module.exports = function(req, res) {
 
                 // test: do a full revolution of the carriage motion thing
                 gpioPin = 26; // for GPIO 26
-                for(var i = 0; i < (2*200*16) - 1; i++){ // (stepsPerRev * microstepping * 2) - 1. (as it's a half cycle) - is there a fencepost error here?
+                for(var i = 0; i < /*(2*200*16) - 1*/ 100; i++){ // (stepsPerRev * microstepping * 2) - 1. (as it's a half cycle) - is there a fencepost error here?
                     // cycle state
-                    sleaep(1); 
+                    sleaep(10); 
                     rpio.write(gpioPin, !rpio.read(gpioPin));
+                    res.contentType('json');
+                    res.send({ gpio: gpioPin, status: rpio.read(gpioPin) }); 
                 }
-                res.contentType('json');
-                res.send({ gpio: gpioPin, status: rpio.read(gpioPin) }); 
+
 
                 break;
         }
