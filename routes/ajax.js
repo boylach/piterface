@@ -1,6 +1,7 @@
 var rpio = require('rpio');
 
 
+
 /* GET ajax response. */
 module.exports = function(req, res) {
     
@@ -23,11 +24,31 @@ module.exports = function(req, res) {
                 res.contentType('json');
                 res.send({ gpio: req.body.gpio, status: req.body.status });
             
-            break;
+                break;
+
+            case 'stepperFocusLoop':
+
+                rpio.init({mapping: 'gpio'});
+                rpio.open(req.body.gpio, rpio.OUTPUT, + req.body.status);
+                rpio.write(req.body.gpio, + req.body.status);
+                res.contentType('json');
+                res.send({ gpio: req.body.gpio, status: req.body.status });
+
+                console.log('stepperFocusLoop');
+            
+                // test: do a full revolution of the carriage motion thing
+        //        for(var i = 0; i < 200*16 - 1; i++){ // stepsPerRev * microstepping
+                    // cycle state
+        //            slee
+
+         //           sleep()
+         //       }
+
+                break;
         }
       
-    }
-    // res.contentType('json');
-    // res.send({ some: req.body.action });
+    }                                           
+    // res.contentType('json');                 
+    // res.send({ some: req.body.action });     
 
 };
