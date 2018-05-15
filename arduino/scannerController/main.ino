@@ -88,13 +88,13 @@ void loop() {
 		case '9': // motion C+
 			outgoingByte = 'C';
 			digitalWrite(pinCdir, HIGH);
-			jog(10000, 100, pinCdir, pinCdir);
+			jog(10000, 100, pinCstep, pinCstep);
 			break;
 
 		case '6': // motion C-
 			outgoingByte = 'c';
 			digitalWrite(pinCdir, LOW);
-			jog(10000, 100, pinCdir, pinCdir);
+			jog(10000, 100, pinCstep, pinCstep);
 			break;
 
 		case '1': // LED R
