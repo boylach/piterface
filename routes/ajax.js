@@ -74,6 +74,7 @@ module.exports = function(req, res) {
                 dirPin = 17;
                 rpio.write(dirPin, req.body.status);
                 console.log("76");
+                console.log(req.body.gpio);
                 // test: do a full revolution of the carriage motion thing
                 gpioPin = 26; // for GPIO 26
                 for(var i = 0; i < (2*200*16) - 1; i++){ // (stepsPerRev * microstepping * 2) - 1. (as it's a half cycle) - is there a fencepost error here?
