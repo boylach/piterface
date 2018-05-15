@@ -78,7 +78,7 @@ module.exports = function(req, res) {
                 gpioPin = 26; // for GPIO 26
                 for(var i = 0; i < (2*200*16) - 1; i++){ // (stepsPerRev * microstepping * 2) - 1. (as it's a half cycle) - is there a fencepost error here?
                     // cycle state
-                    sleaep(0.1); 
+                    sleaep(1); 
                     rpio.write(gpioPin, !rpio.read(gpioPin));
                 }
 
