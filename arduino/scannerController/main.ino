@@ -128,7 +128,7 @@ int motionsDone() {
 		stepperA.run();
 		stepperB.run();
 		stepperC.run();
-	} while ( !( (stepperA.distanceToGo()==0)&&(stepperB.distanceToGo()==0)&&(stepperC.distanceToGo()==0) ) )
+	} while ( !( (stepperA.distanceToGo()==0)&&(stepperB.distanceToGo()==0)&&(stepperC.distanceToGo()==0) ) );
 
 	return 1;
 }
