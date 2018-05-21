@@ -25,16 +25,12 @@ void setup() {
 	// configure steppers
     stepperA.setMaxSpeed(2000.0);
     stepperA.setAcceleration(100.0);
-    stepperA.moveTo(0);
 
 	stepperB.setMaxSpeed(2000.0);
     stepperB.setAcceleration(100.0);
-    stepperB.moveTo(0);
 
     stepperC.setMaxSpeed(2000.0);
     stepperC.setAcceleration(100.0);
-    stepperC.moveTo(0);
-
 }
 
 void loop() {
@@ -42,11 +38,6 @@ void loop() {
   	if (Serial.available() > 0) {
 		// read the incoming byte:
 		incomingByte = Serial.read();
-
-		// implement stepper motion
-		stepperA.run();
-		stepperB.run();
-		stepperC.run();
 
 		switch (incomingByte)
 		{
@@ -57,32 +48,32 @@ void loop() {
 			outgoingByte = 'A';
 
 			// move a little
-			jog(&stepperA, 1, 1);
+			stepperA.runToNewPosition(stepperA.currentPosition()+1);
 			break;
 
 		case '4': // focus A-
 			outgoingByte = 'a';
-			jog(&stepperA, -1, 1);
+			stepperA.runToNewPosition(stepperA.currentPosition()-1);
 			break;
 
 		case '8': // focus B+
 			outgoingByte = 'B';
-			jog(&stepperB, 1, 1);
+			stepperB.runToNewPosition(stepperB.currentPosition()+1);
 			break;
 
 		case '5': // focus B-
 			outgoingByte = 'b';
-			jog(&stepperB, -1, 1);
+			stepperB.runToNewPosition(stepperB.currentPosition()-1);
 			break;
 
 		case '9': // motion C+
 			outgoingByte = 'C';
-			jog(&stepperC, 1, 1);
+			stepperC.runToNewPosition(stepperC.currentPosition()+1);
 			break;
 
 		case '6': // motion C-
 			outgoingByte = 'c';
-			jog(&stepperC, -1, 1);
+			stepperC.runToNewPosition(stepperC.currentPosition()-1);
 			break;
 
 		/// LED ILLUMINATION AND FRAME CAPTURE CONTROL
@@ -115,7 +106,7 @@ void loop() {
 		Serial.println(' ');
     }
 }
-
+/*
 int jog(AccelStepper* pStepper, signed int dir, int steps){
 	motionsDone(); // wait for prev motion to finish
 	pStepper->moveTo(pStepper->currentPosition()+steps*dir); // move one step
@@ -132,3 +123,4 @@ int motionsDone() {
 
 	return 1;
 }
+*/
