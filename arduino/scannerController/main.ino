@@ -4,8 +4,8 @@
 
 char incomingByte, outgoingByte = 0;   // for incoming serial data
 
-int pinAdir = 4;
-int pinAstep = 5;
+int pinAdir = 5;
+int pinAstep = 4;
 int pinBdir = 7;   	
 int pinBstep = 6;  	 
 int pinCdir = 2;
@@ -68,12 +68,12 @@ void loop() {
 
 		case '9': // motion C+
 			outgoingByte = 'C';
-			stepperC.runToNewPosition(stepperC.currentPosition()+1);
+			stepperC.runToNewPosition(stepperC.currentPosition()+20);
 			break;
 
 		case '6': // motion C-
 			outgoingByte = 'c';
-			stepperC.runToNewPosition(stepperC.currentPosition()-1);
+			stepperC.runToNewPosition(stepperC.currentPosition()-20);
 			break;
 
 		/// LED ILLUMINATION AND FRAME CAPTURE CONTROL
