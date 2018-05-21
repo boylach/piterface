@@ -4,12 +4,12 @@
 
 char incomingByte, outgoingByte = 0;   // for incoming serial data
 
-int pinAdir = 5;
-int pinAstep = 4;
+int pinAdir = 4;
+int pinAstep = 5;
 int pinBdir = 7;   	
 int pinBstep = 6;  	 
-int pinCdir = 3;
-int pinCstep = 2;
+int pinCdir = 2;
+int pinCstep = 3;
 //int pinR = ;
 //int pinG = ;
 //int pinB = ;
