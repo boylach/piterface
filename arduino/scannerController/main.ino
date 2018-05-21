@@ -117,11 +117,9 @@ void loop() {
 }
 
 int jog(AccelStepper* pStepper, signed int dir, int steps){
-	Serial.print(' starting jog, ');
 	if(pStepper->distanceToGo() == 0){ // if finished last motion
-		pStepper->moveTo(pStepper->currentPosition()+steps*dir) // move one step
+		pStepper->moveTo(pStepper->currentPosition()+steps*dir); // move one step
 	}
-	Serial.print(' ending jog, ');
 	return 1;
 }
 
