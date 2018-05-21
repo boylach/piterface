@@ -117,9 +117,18 @@ void loop() {
 }
 
 int jog(AccelStepper* pStepper, signed int dir, int steps){
-	if(pStepper->distanceToGo() == 0){ // if finished last motion
-		pStepper->moveTo(pStepper->currentPosition()+steps*dir); // move one step
-	}
+	motionsDone(); // wait for prev motion to finish
+	pStepper->moveTo(pStepper->currentPosition()+steps*dir); // move one step
+
 	return 1;
 }
 
+int motionsDone() {
+	do {
+		stepperA.run();
+		stepperB.run();
+		stepperC.run();
+	} while ( !( (stepperA.distanceToGo()==0)&&(stepperB.distanceToGo()==0)&&(stepperC.distanceToGo()==0) ) )
+
+	return 1;
+}
