@@ -1,56 +1,39 @@
 // main.ino
 
+#include <AccelStepper.h>
+
 char incomingByte, outgoingByte = 0;   // for incoming serial data
 
-int pinA1dir = 7;
-int pinA1step = 10;
-int pinA2dir = 6;	// swap with B2?
-int pinA2step = 8;	// swap with B2?
-
-int pinB1dir = 3;   	
-int pinB1step = 11;  	 
-int pinB2dir = 5;
-int pinB2step = 9;
-
-int pinCdir = 4;
-int pinCstep = 12;
+int pinAdir = 5;
+int pinAstep = 4;
+int pinBdir = 7;   	
+int pinBstep = 6;  	 
+int pinCdir = 3;
+int pinCstep = 2;
 //int pinR = ;
 //int pinG = ;
 //int pinB = ;
 //int pinIR = ;
 
+AccelStepper stepperA(AccelStepper::DRIVER, pinAstep, pinAdir);
+AccelStepper stepperB(AccelStepper::DRIVER, pinBstep, pinBdir);
+AccelStepper stepperC(AccelStepper::DRIVER, pinCstep, pinCdir);
+
 void setup() {
 	Serial.begin(9600);     // opens serial port, sets data rate to 9600 bps
-	
-	// configure
-	pinMode(pinA1dir, OUTPUT);
-	pinMode(pinA1step, OUTPUT);
-	pinMode(pinA2dir, OUTPUT);
-	pinMode(pinA2step, OUTPUT);
 
-	pinMode(pinB1dir, OUTPUT);
-	pinMode(pinB1step, OUTPUT);
-	pinMode(pinB2dir, OUTPUT);
-	pinMode(pinB2step, OUTPUT);
+	// configure steppers
+    stepperA.setMaxSpeed(2000.0);
+    stepperA.setAcceleration(100.0);
+    stepperA.moveTo(0);
 
-	pinMode(pinCdir, OUTPUT);
-	pinMode(pinCstep, OUTPUT);
+	stepperB.setMaxSpeed(2000.0);
+    stepperB.setAcceleration(100.0);
+    stepperB.moveTo(0);
 
-
-	// initial states
-	digitalWrite(pinA1dir, HIGH);
-	digitalWrite(pinA1step, LOW);
-	digitalWrite(pinA2dir, LOW);
-	digitalWrite(pinA2step, LOW);
-
-	digitalWrite(pinB1dir, HIGH);
-	digitalWrite(pinB1step, LOW);
-	digitalWrite(pinB2dir, LOW);
-	digitalWrite(pinB2step, LOW);
-
-	digitalWrite(pinCdir, HIGH);
-	digitalWrite(pinCstep, LOW);
-
+    stepperC.setMaxSpeed(2000.0);
+    stepperC.setAcceleration(100.0);
+    stepperC.moveTo(0);
 
 }
 
@@ -60,42 +43,49 @@ void loop() {
 		// read the incoming byte:
 		incomingByte = Serial.read();
 
+		// implement stepper motion
+		stepperA.run();
+		stepperB.run();
+		stepperC.run();
+
 		switch (incomingByte)
 		{
+
+		/// STEPPER MOTOR CONTROL
+
 		case '7': // focus A+
 			outgoingByte = 'A';
-			// set direction to +
-			digitalWrite(pinA1dir, HIGH);
-			digitalWrite(pinA2dir, LOW);
 
 			// move a little
-			jog(1000, 100, pinA1step, pinA2step);
-
+			jog(&stepperA, 1, 1);
 			break;
 
 		case '4': // focus A-
 			outgoingByte = 'a';
+			jog(&stepperA, -1, 1);
 			break;
 
 		case '8': // focus B+
 			outgoingByte = 'B';
+			jog(&stepperB, 1, 1);
 			break;
 
 		case '5': // focus B-
 			outgoingByte = 'b';
+			jog(&stepperB, -1, 1);
 			break;
 
 		case '9': // motion C+
 			outgoingByte = 'C';
-			digitalWrite(pinCdir, HIGH);
-			jog(10, 100, pinCstep, pinCstep);
+			jog(&stepperC, 1, 1);
 			break;
 
 		case '6': // motion C-
 			outgoingByte = 'c';
-			digitalWrite(pinCdir, LOW);
-			jog(10, 100, pinCstep, pinCstep);
+			jog(&stepperC, -1, 1);
 			break;
+
+		/// LED ILLUMINATION AND FRAME CAPTURE CONTROL
 
 		case '1': // LED R
 			outgoingByte = 'R';
@@ -118,7 +108,7 @@ void loop() {
 			break;
 		}
 
-		// feedback to user
+		// FEEDBACK TO USER
 		Serial.print(incomingByte);
 		Serial.print(' ');
 		Serial.print(outgoingByte);
@@ -126,15 +116,9 @@ void loop() {
     }
 }
 
-int jog(int del, int iter, int pin1, int pin2){
-// delms is not too accurate re. clock limits, pinwrite overhead, etc
-	for (int i=0; i < iter; i++) {
-		digitalWrite(pin1, HIGH);
-		digitalWrite(pin2, HIGH);
-		delay(del);
-		digitalWrite(pin1, LOW);
-		digitalWrite(pin2, LOW);
-		delay(del);
+int jog(AccelStepper* pStepper, signed int dir, int steps){
+	if(pStepper->distanceToGo() == 0){ // if finished last motion
+		pStepper->moveTo(pStepper->currentPosition()+steps*dir) // move one step
 	}
 	return 1;
 }
